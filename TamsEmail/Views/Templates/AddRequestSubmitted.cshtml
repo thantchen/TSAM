@@ -1,0 +1,20 @@
+﻿@using TamsEmail.Views.Templates
+@model AddRequestSubmittedViewModel
+
+<p>Hello @Model.Salutation,</p>
+
+<p>Your Add Request has been successfully submitted to TAMS. The 
+    <span style="font-weight: bold">Add Log ID Number</span> that will be used to track this request is as follows:</p>
+
+@await Html.PartialAsync("_LogNumbersList", Model.LogNumbers)  
+
+<p>A copy of your submission is included below for your records.</p>
+
+<p>
+    @await Html.PartialAsync("_RequestDetails", Model.RequestDetails())
+    <span style="font-weight: bold;">Comments:</span><br />
+    @Model.Comments
+</p>
+
+<p>You will receive a notification when there is a status change related to this request. If you have questions or need further assistance, contact a member of the Ankura team at 
+    <a href="mailto:@(Model.SupportEmailAddress)">@Model.SupportEmailAddress</a>. Please be sure to include the Add Log ID Number(s) in your inquiry.</p>

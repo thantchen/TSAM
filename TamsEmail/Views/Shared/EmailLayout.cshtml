@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ankura TAMS Email</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style type="text/css">
+        /* FONTS */
+        @@media screen {
+            @@font-face {
+                font-family: Montserrat,Helvetica,Arial,sans-serif;
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+
+        /* CLIENT-SPECIFIC STYLES */
+        body, table, td, a {
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+
+        /* RESET STYLES */
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        table {
+            border-collapse: collapse !important;
+        }
+
+        body {
+            height: 100% !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            width: 100% !important;
+        }
+
+        /* ANDROID CENTER FIX */
+        div[style*="margin: 16px 0;"] {
+            margin: 0 !important;
+        }
+    </style>
+</head>
+<body style="background-color: #dedede; margin: 0 !important; padding: 0 !important;">
+
+    <!--<table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 15px;">-->
+        <!-- LOGO -->
+        <!--<tr>
+            <td align="center" style="background-color: #fff;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 700px; margin-bottom: 15px;">
+                    <tr>
+                        <td align="center" valign="top" style="padding: 10px 10px 10px 10px; font-family: Montserrat,Helvetica,Arial,sans-serif;">
+                            <div style="text-align: left;">
+                                <span style="color: #662D91; font-size: 1.1rem; font-weight: bold;">TAMS<span style='font-size: 0.6rem; color: #1d75bc'><i> powered by Ankura</i></span></span>
+                                <div style='font-size: 0.8rem; color: #6D6E70'>Transition Agreement Management Solution</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>-->
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="margin-bottom: 15px;">
+        <!-- COPY BLOCK -->
+        <tr>
+            <td align="center" style="padding: 0px 10px 0px 10px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 700px; border-radius: 4px 4px 4px 4px; background-color: #fff;">
+                    <!-- COPY -->
+                    <tr>
+                        <td align="left" style="padding: 10px 10px 10px 10px; color: #666666; font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: .9rem;">
+                            <div id="emailBody">
+                                @RenderBody()
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <!-- FOOTER -->
+        <tr>
+            <td align="center" style="padding: 0px 10px 0px 10px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 700px;">
+                    <!-- FOOTER -->
+                    <tr>
+                        <td align="left" style="padding: 0px 30px 30px 30px; color: #666666; font-family: Montserrat,Helvetica,Arial,sans-serif; font-size: 10px; line-height: 18px;">
+                            <p style="margin: 0;">Copyright &copy; @(System.DateTime.Now.Year) <a href="www.ankura.com" target="_blank" rel="nofollow">Transition Agreement Management Solution (TAMS), powered by Ankura</a>, All rights reserved.</p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+﻿@using TamsEmail.Views.Templates
+@model StatusChangeAddLogViewModel
+
+<p>Hello @Model.Salutation,</p>
+
+<p>A status change has occurred for an Add Request associated with your account. The details related to the change are as follows:</p>
+
+<table style="border-collapse: collapse; border: 1px solid #000; width: 100%;" id="statusDetails">
+    <tbody>
+        <tr id="statusRow">
+            <td style="border: 1px solid #000; padding: 3px 3px;"><span style="font-weight:bold;">Add Log ID Number:</span> @Model.Id</td>
+            <td style="border: 1px solid #000; padding: 3px 3px;"><span style="font-weight:bold;">Current Status:</span> @Model.CurrentStatus</td>
+        </tr>
+        <tr id="statusRow">
+            <td style="border: 1px solid #000; padding: 3px 3px;" colspan="2"><span style="font-weight:bold;">Type of Add:</span> @Model.AddType</td>
+        </tr>
+        <tr id="tsaRow">
+            <td style="border: 1px solid #000; padding: 3px 3px;"><span style="font-weight:bold;">TSA ID:</span> @Model.TsaId</td>
+            <td style="border: 1px solid #000; padding: 3px 3px;"><span style="font-weight:bold;">TSA Sub-ID:</span> @Model.TsaSubId</td>
+        </tr>
+        <tr id="commentsRow">
+            <td colspan="2" style="border: 1px solid #000; padding: 3px 3px;">
+                <span style="font-weight:bold;">Comments:</span><br />
+                @Model.Comments
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<p>
+    If you have questions or need further assistance, contact a member of the Ankura team at 
+    <a href="mailto:@(Model.SupportEmailAddress)">@Model.SupportEmailAddress</a>. Please be sure to include the Add Log ID Number(s) in your inquiry.
+</p>

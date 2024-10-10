@@ -1,0 +1,12 @@
+﻿@model Dictionary<string, string>
+
+<div id="requestDetails">
+    @{
+        foreach (var pair in Model)
+        {
+            <text>
+                <div><span style="font-weight: bold;">@pair.Key</span>: @pair.Value</div>
+            </text>
+        }
+    }
+</div>

@@ -1,0 +1,16 @@
+﻿@using System.Collections.Generic
+@using TamsEmail.Views.Templates
+@model List<TsaLogNumber>
+
+<ul id="logNumberList">
+    @{
+        foreach(var logNumber in Model)
+        {
+            <text>
+                <li data-record-id="@logNumber.Id">
+                    <span style="font-weight:bold;">@logNumber.Id</span>@if (!String.IsNullOrEmpty(logNumber.TsaSubId)) { <span> for TSA Sub-ID @logNumber.TsaSubId</span> }
+                </li>
+            </text>
+        }
+    }
+</ul>
